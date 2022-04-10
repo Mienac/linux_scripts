@@ -12,7 +12,7 @@ read varname
 
 part=/dev/$varname
 
-checkper=$(df -h | grep $part | awk '{print $5} | cut '%' -f1)
+checkper=$(df -h | grep $part | awk '{print $5}' | cut '%' -f1)
 
 echo "$part is $checkper% full"
 
